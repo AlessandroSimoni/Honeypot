@@ -1,0 +1,51 @@
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  background: #313944;
+  font-weight: lighter;
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+  margin-top: 5%;
+}
+
+#center {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+
+#login-row,
+#password-row {
+  width: 96%;
+  height: 30px;
+  padding: 5px;
+  margin: 5px 0;
+  margin-top: 5%;
+}
+
+#login-button {
+  color: #FFF;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  background: #F0793F;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10%;
+}
+
+#login-button:hover {
+  background: #EA5912;
+  cursor: pointer;
+}

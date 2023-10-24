@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link rel="icon" href="https://www.grupposigla.it/img/logo-gruppo-sigla-2021.png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</head>
+
+<body>
+    <img id="logo" src="https://www.grupposigla.it/img/logo-gruppo-sigla-2021.png" alt="logo">
+
+    <form method="post" action="/plc">
+        <button id="start" name="action" value="start">Start</button>
+        <button id="stop" name="action" value="stop">Stop</button>
+        <button id="reset" name="action" value="reset">Reset</button>
+    </form>
+
+    <div id="bigdiv">
+        <div id="leftcenter">
+            <label id="statoFabbrica"><span><b>Stato fabbrica:</b> Spenta</span></label><br><br>
+            <label id="sensorePosBott"><span><b>Sensore bottiglia:</b> Nessun rilevamento</span></label><br><br>
+            <label id="motoreCarrello"><span><b>Motore carrello:</b> Fermo</span></label><br><br>
+            <label id="motoreDistribuzione"><span><b>Motore distribuzione:</b> Fermo</span></label><br><br>
+            <label id="sensoreLimite"><b>Sensore limite:</b> Non raggiunto</label>
+        </div>
+
+        <div id="rightcenter">
+            <label id="numeroBott"><span><b>Numero bottiglie:</b> 0</span></label><br><br>
+            <label id="numeroBottOk"><span><b>Numero bottiglie corrette:</b> 0</span></label><br><br>
+            <label id="numeroBottKo"><span><b>Numero bottiglie fallite:</b> 0</span></label><br><br>
+            <label id="spiaRisultato"><span><b>Risultato bottiglia:</b> <span id="circle"></span></span></label><br><br>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</body>
+
+</html>

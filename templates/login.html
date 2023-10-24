@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="icon" href="https://www.grupposigla.it/img/logo-gruppo-sigla-2021.png">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+</head>
+
+<body>
+  <img id="logo" src="https://www.grupposigla.it/img/logo-gruppo-sigla-2021.png" alt="logo">
+  <div id="center">
+    <form method="post" action="/checklogin">
+      <input type="text" name="username" id="login-row" placeholder="Username" required>
+      <input type="password" name="password" id="password-row" placeholder="Password" required>
+      <button id="login-button" type="submit" value="Login">Login</button>
+    </form>
+  </div>
+</body>
+
+</html>
