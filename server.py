@@ -29,15 +29,17 @@ def check_login():
 @app.route('/welcome')
 def welcome():
     if logged_in:
+        loginPLC()
         return render_template('dashboard.html')
     else:
-        return "Devi effettuare il login prima. <a href='/'>Torna al login</a>"
+        message = "Devi effettuare il login prima."
+        return render_template('login.html', alert=message)
+
 
 @app.route('/plc', methods=['POST'])
 def plc():
     value = request.form['action']
     if value == "start":
-        loginPLC()
         startPLC()
         startFactory()
 
@@ -51,6 +53,7 @@ def plc():
         resetFactory()
         stopPLC()
         logoutPLC()
+        loginPLC()
         return render_template('dashboard.html')
 
 @app.route('/get_data', methods=['GET'])
