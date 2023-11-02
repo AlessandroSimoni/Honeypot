@@ -14,13 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 else
                     localStorage.setItem('statoFabbrica', "Spenta");
 
-                if (data[2] == true){
+                if (data[2] == true && data[5] == 0){
+                    localStorage.setItem('sensoreLimite', "Non raggiunto");
+                    localStorage.setItem('sensorePosBott', "Nessun rilevamento");
+                    localStorage.setItem('motoreCarrello', "In movimento");
+                    localStorage.setItem('motoreDistribuzione', "Fermo");
+                }else if (data[2] == true && data[5] > 0){
                     localStorage.setItem('sensoreLimite', "Raggiunto");
                     localStorage.setItem('sensorePosBott', "Nessun rilevamento");
                     localStorage.setItem('motoreCarrello', "In movimento");
                     localStorage.setItem('motoreDistribuzione', "Fermo");
-                }
-                else{
+                }else{
                     localStorage.setItem('sensorePosBott', "Rilevato");
                     localStorage.setItem('motoreCarrello', "Fermo");
                     if(data[3] == true){
