@@ -9,6 +9,15 @@
 </head>
 
 <body>
+  <script>
+    window.onload = function () {
+      var alertMessage = "{{ alert }}";
+      if (alertMessage) {
+        alert(alertMessage);
+      }
+    };
+  </script>
+
   <img id="logo" src="https://www.grupposigla.it/img/logo-gruppo-sigla-2021.png" alt="logo">
   <div id="center">
     <form method="post" action="/checklogin">
